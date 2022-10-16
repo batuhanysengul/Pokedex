@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Monument Extended';
 }
 
-.App-logo {
-  height: 40vmin;
+:root {
+  --bright1: #c3073f;
+  --bright2: #950740;
+  --bright3: #6f2232;
+  --grey: #4e4e50;
+  --black: #1a1a1d;
+}
+
+@font-face {
+  font-family: 'Monument Extended';
+  src: local('Monument Extended'),
+    url('../src/components/fonts/PPMonumentExtended-Regular.otf'),
+    url('../src/components/fonts/PPMonumentExtended-Black.otf'),
+    url('../src/components/fonts/PPMonumentExtended-Light.otf');
+}
+
+.noise-bg {
+  background-image: url("https://media.discordapp.net/attachments/1015548474856591402/1025020819765731389/noise.png");
+  background-color: #5c1f31;
+  animation: noise 0.5s steps(10) infinite;
+  background-repeat: repeat;
+  background-size: auto;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  opacity: 1;
   pointer-events: none;
+  position: fixed;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes noise {
+  0% {
+    background-position: 0 0;
   }
   to {
-    transform: rotate(360deg);
+    background-position: 100% 100%;
   }
 }
+
+
